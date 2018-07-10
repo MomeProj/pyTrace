@@ -28,35 +28,38 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.pyTraceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.statusStripMain = new System.Windows.Forms.StatusStrip();
-			this.toolStripContainerMain = new System.Windows.Forms.ToolStripContainer();
-			this.toolStripPlayBack = new System.Windows.Forms.ToolStrip();
-			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripMsgFilter = new System.Windows.Forms.ToolStrip();
-			this.toolStripLabelCode = new System.Windows.Forms.ToolStripLabel();
-			this.toolStripTextBoxMsgFilter = new System.Windows.Forms.ToolStripTextBox();
-			this.toolStripButtonMsgFilterEnable = new System.Windows.Forms.ToolStripButton();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
 			this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.sQLiteDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.statusStripMain = new System.Windows.Forms.StatusStrip();
+			this.toolStripContainerMain = new System.Windows.Forms.ToolStripContainer();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.toolStripPlayBack = new System.Windows.Forms.ToolStrip();
+			this.toolStripButtonPlay = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonPause = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonStop = new System.Windows.Forms.ToolStripButton();
+			this.toolStripMsgFilter = new System.Windows.Forms.ToolStrip();
+			this.toolStripLabelCode = new System.Windows.Forms.ToolStripLabel();
+			this.toolStripButtonMsgFilterEnable = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonAddFilter = new System.Windows.Forms.ToolStripButton();
+			this.imageListPlayback = new System.Windows.Forms.ImageList(this.components);
+			this.imageListFilter = new System.Windows.Forms.ImageList(this.components);
+			this.toolStripComboBoxMsgFilter = new System.Windows.Forms.ToolStripComboBox();
 			this.menuStripMain.SuspendLayout();
 			this.toolStripContainerMain.ContentPanel.SuspendLayout();
 			this.toolStripContainerMain.TopToolStripPanel.SuspendLayout();
 			this.toolStripContainerMain.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.toolStripPlayBack.SuspendLayout();
 			this.toolStripMsgFilter.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStripMain
@@ -66,7 +69,7 @@
             this.optionsToolStripMenuItem});
 			this.menuStripMain.Location = new System.Drawing.Point(0, 0);
 			this.menuStripMain.Name = "menuStripMain";
-			this.menuStripMain.Size = new System.Drawing.Size(344, 27);
+			this.menuStripMain.Size = new System.Drawing.Size(344, 24);
 			this.menuStripMain.TabIndex = 0;
 			this.menuStripMain.Text = "menuStrip1";
 			// 
@@ -78,10 +81,56 @@
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
-			this.pyTraceToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+			this.pyTraceToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F);
 			this.pyTraceToolStripMenuItem.Name = "pyTraceToolStripMenuItem";
-			this.pyTraceToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+			this.pyTraceToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
 			this.pyTraceToolStripMenuItem.Text = "pyTrace";
+			// 
+			// loadToolStripMenuItem
+			// 
+			this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+			this.loadToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+			this.loadToolStripMenuItem.Text = "Load";
+			// 
+			// saveToolStripMenuItem
+			// 
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+			this.saveToolStripMenuItem.Text = "Save";
+			// 
+			// saveAsToolStripMenuItem
+			// 
+			this.saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sQLiteDBToolStripMenuItem});
+			this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+			this.saveAsToolStripMenuItem.Text = "Save As ...";
+			// 
+			// sQLiteDBToolStripMenuItem
+			// 
+			this.sQLiteDBToolStripMenuItem.Name = "sQLiteDBToolStripMenuItem";
+			this.sQLiteDBToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+			this.sQLiteDBToolStripMenuItem.Text = "SQLite DB";
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(126, 6);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.ToolTipText = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+			// 
+			// optionsToolStripMenuItem
+			// 
+			this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F);
+			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+			this.optionsToolStripMenuItem.Text = "Options";
 			// 
 			// statusStripMain
 			// 
@@ -99,13 +148,13 @@
 			// toolStripContainerMain.ContentPanel
 			// 
 			this.toolStripContainerMain.ContentPanel.Controls.Add(this.dataGridView1);
-			this.toolStripContainerMain.ContentPanel.Size = new System.Drawing.Size(344, 367);
+			this.toolStripContainerMain.ContentPanel.Size = new System.Drawing.Size(344, 370);
 			this.toolStripContainerMain.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.toolStripContainerMain.LeftToolStripPanelVisible = false;
-			this.toolStripContainerMain.Location = new System.Drawing.Point(0, 27);
+			this.toolStripContainerMain.Location = new System.Drawing.Point(0, 24);
 			this.toolStripContainerMain.Name = "toolStripContainerMain";
 			this.toolStripContainerMain.RightToolStripPanelVisible = false;
-			this.toolStripContainerMain.Size = new System.Drawing.Size(344, 392);
+			this.toolStripContainerMain.Size = new System.Drawing.Size(344, 395);
 			this.toolStripContainerMain.TabIndex = 2;
 			this.toolStripContainerMain.Text = "toolStripContainer1";
 			// 
@@ -114,59 +163,86 @@
 			this.toolStripContainerMain.TopToolStripPanel.Controls.Add(this.toolStripPlayBack);
 			this.toolStripContainerMain.TopToolStripPanel.Controls.Add(this.toolStripMsgFilter);
 			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
+			this.dataGridView1.RowTemplate.Height = 24;
+			this.dataGridView1.Size = new System.Drawing.Size(344, 370);
+			this.dataGridView1.TabIndex = 0;
+			// 
 			// toolStripPlayBack
 			// 
 			this.toolStripPlayBack.Dock = System.Windows.Forms.DockStyle.None;
 			this.toolStripPlayBack.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButtonPlay,
+            this.toolStripButtonPause,
+            this.toolStripButtonStop});
 			this.toolStripPlayBack.Location = new System.Drawing.Point(4, 0);
 			this.toolStripPlayBack.Name = "toolStripPlayBack";
 			this.toolStripPlayBack.Size = new System.Drawing.Size(81, 25);
 			this.toolStripPlayBack.TabIndex = 0;
 			// 
-			// toolStripButton1
+			// toolStripButtonPlay
 			// 
-			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
-			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton1.Text = "toolStripButtonPlay";
+			this.toolStripButtonPlay.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonPlay.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+			this.toolStripButtonPlay.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPlay.Image")));
+			this.toolStripButtonPlay.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonPlay.Name = "toolStripButtonPlay";
+			this.toolStripButtonPlay.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonPlay.Text = "Play";
+			this.toolStripButtonPlay.ToolTipText = "Play";
+			this.toolStripButtonPlay.Click += new System.EventHandler(this.ToolStripButtonPlay_Click);
+			this.toolStripButtonPlay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonPlay_MouseDown);
+			this.toolStripButtonPlay.MouseLeave += new System.EventHandler(this.ToolStripButtonPlay_MouseLeave);
+			this.toolStripButtonPlay.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonPlay_MouseUp);
 			// 
-			// toolStripButton2
+			// toolStripButtonPause
 			// 
-			this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
-			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton2.Name = "toolStripButton2";
-			this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton2.Text = "toolStripButtonPause";
+			this.toolStripButtonPause.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonPause.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+			this.toolStripButtonPause.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPause.Image")));
+			this.toolStripButtonPause.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonPause.Name = "toolStripButtonPause";
+			this.toolStripButtonPause.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonPause.Text = "Pause";
+			this.toolStripButtonPause.ToolTipText = "Pause";
+			this.toolStripButtonPause.Click += new System.EventHandler(this.ToolStripButtonPause_Click);
+			this.toolStripButtonPause.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonPause_MouseDown);
+			this.toolStripButtonPause.MouseLeave += new System.EventHandler(this.ToolStripButtonPause_MouseLeave);
+			this.toolStripButtonPause.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonPause_MouseUp);
 			// 
-			// toolStripButton3
+			// toolStripButtonStop
 			// 
-			this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
-			this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton3.Name = "toolStripButton3";
-			this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton3.Text = "toolStripButtonStop";
+			this.toolStripButtonStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonStop.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+			this.toolStripButtonStop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonStop.Image")));
+			this.toolStripButtonStop.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonStop.Name = "toolStripButtonStop";
+			this.toolStripButtonStop.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonStop.Text = "Stop";
+			this.toolStripButtonStop.ToolTipText = "Stop";
+			this.toolStripButtonStop.Click += new System.EventHandler(this.ToolStripButtonStop_Click);
+			this.toolStripButtonStop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonStop_MouseDown);
+			this.toolStripButtonStop.MouseLeave += new System.EventHandler(this.ToolStripButtonStop_MouseLeave);
+			this.toolStripButtonStop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonStop_MouseUp);
 			// 
 			// toolStripMsgFilter
 			// 
 			this.toolStripMsgFilter.Dock = System.Windows.Forms.DockStyle.None;
 			this.toolStripMsgFilter.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabelCode,
-            this.toolStripTextBoxMsgFilter,
+            this.toolStripComboBoxMsgFilter,
             this.toolStripButtonMsgFilterEnable,
-            this.toolStripButton4});
-			this.toolStripMsgFilter.Location = new System.Drawing.Point(85, 0);
+            this.toolStripButtonAddFilter});
+			this.toolStripMsgFilter.Location = new System.Drawing.Point(87, 0);
 			this.toolStripMsgFilter.Name = "toolStripMsgFilter";
-			this.toolStripMsgFilter.Size = new System.Drawing.Size(221, 25);
+			this.toolStripMsgFilter.Size = new System.Drawing.Size(252, 25);
 			this.toolStripMsgFilter.TabIndex = 1;
 			// 
 			// toolStripLabelCode
@@ -175,12 +251,6 @@
 			this.toolStripLabelCode.Name = "toolStripLabelCode";
 			this.toolStripLabelCode.Size = new System.Drawing.Size(41, 22);
 			this.toolStripLabelCode.Text = "Code:";
-			// 
-			// toolStripTextBoxMsgFilter
-			// 
-			this.toolStripTextBoxMsgFilter.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
-			this.toolStripTextBoxMsgFilter.Name = "toolStripTextBoxMsgFilter";
-			this.toolStripTextBoxMsgFilter.Size = new System.Drawing.Size(120, 25);
 			// 
 			// toolStripButtonMsgFilterEnable
 			// 
@@ -193,72 +263,44 @@
 			this.toolStripButtonMsgFilterEnable.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonMsgFilterEnable.Text = "Enable";
 			// 
-			// dataGridView1
+			// toolStripButtonAddFilter
 			// 
-			this.dataGridView1.AllowUserToDeleteRows = false;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(344, 367);
-			this.dataGridView1.TabIndex = 0;
+			this.toolStripButtonAddFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonAddFilter.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+			this.toolStripButtonAddFilter.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAddFilter.Image")));
+			this.toolStripButtonAddFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonAddFilter.Name = "toolStripButtonAddFilter";
+			this.toolStripButtonAddFilter.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonAddFilter.Text = "Add Filter";
+			this.toolStripButtonAddFilter.ToolTipText = "Add Filter";
+			this.toolStripButtonAddFilter.Click += new System.EventHandler(this.ToolStripButtonAddFilter_Click);
+			this.toolStripButtonAddFilter.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonAddFilter_MouseDown);
+			this.toolStripButtonAddFilter.MouseLeave += new System.EventHandler(this.ToolStripButtonAddFilter_MouseLeave);
+			this.toolStripButtonAddFilter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ToolStripButtonAddFilter_MouseUp);
 			// 
-			// toolStripSeparator1
+			// imageListPlayback
 			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.imageListPlayback.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPlayback.ImageStream")));
+			this.imageListPlayback.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListPlayback.Images.SetKeyName(0, "play_16x16.png");
+			this.imageListPlayback.Images.SetKeyName(1, "playp_16x16.png");
+			this.imageListPlayback.Images.SetKeyName(2, "pause_16x16.png");
+			this.imageListPlayback.Images.SetKeyName(3, "pausep_16x16.png");
+			this.imageListPlayback.Images.SetKeyName(4, "stop_16x16.png");
+			this.imageListPlayback.Images.SetKeyName(5, "stopp_16x16.png");
 			// 
-			// exitToolStripMenuItem
+			// imageListFilter
 			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.exitToolStripMenuItem.Text = "Exit";
-			this.exitToolStripMenuItem.ToolTipText = "Exit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			this.imageListFilter.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListFilter.ImageStream")));
+			this.imageListFilter.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageListFilter.Images.SetKeyName(0, "plus_16x16.png");
+			this.imageListFilter.Images.SetKeyName(1, "plusp_16x16.png");
 			// 
-			// toolStripButton4
+			// toolStripComboBoxMsgFilter
 			// 
-			this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
-			this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-			this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton4.Name = "toolStripButton4";
-			this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton4.Text = "toolStripButtonAddFilter";
-			// 
-			// loadToolStripMenuItem
-			// 
-			this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-			this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.loadToolStripMenuItem.Text = "Load";
-			// 
-			// saveToolStripMenuItem
-			// 
-			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.saveToolStripMenuItem.Text = "Save";
-			// 
-			// saveAsToolStripMenuItem
-			// 
-			this.saveAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sQLiteDBToolStripMenuItem});
-			this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.saveAsToolStripMenuItem.Text = "Save As ...";
-			// 
-			// sQLiteDBToolStripMenuItem
-			// 
-			this.sQLiteDBToolStripMenuItem.Name = "sQLiteDBToolStripMenuItem";
-			this.sQLiteDBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.sQLiteDBToolStripMenuItem.Text = "SQLite DB";
-			// 
-			// optionsToolStripMenuItem
-			// 
-			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(76, 23);
-			this.optionsToolStripMenuItem.Text = "Options";
+			this.toolStripComboBoxMsgFilter.Font = new System.Drawing.Font("Arial", 9F);
+			this.toolStripComboBoxMsgFilter.Name = "toolStripComboBoxMsgFilter";
+			this.toolStripComboBoxMsgFilter.Size = new System.Drawing.Size(120, 25);
 			// 
 			// MainForm
 			// 
@@ -269,6 +311,7 @@
 			this.Controls.Add(this.statusStripMain);
 			this.Controls.Add(this.menuStripMain);
 			this.DoubleBuffered = true;
+			this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.MainMenuStrip = this.menuStripMain;
 			this.Name = "MainForm";
 			this.Text = "pyTrace";
@@ -279,11 +322,11 @@
 			this.toolStripContainerMain.TopToolStripPanel.PerformLayout();
 			this.toolStripContainerMain.ResumeLayout(false);
 			this.toolStripContainerMain.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.toolStripPlayBack.ResumeLayout(false);
 			this.toolStripPlayBack.PerformLayout();
 			this.toolStripMsgFilter.ResumeLayout(false);
 			this.toolStripMsgFilter.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -296,22 +339,24 @@
 		private System.Windows.Forms.StatusStrip statusStripMain;
 		private System.Windows.Forms.ToolStripContainer toolStripContainerMain;
 		private System.Windows.Forms.ToolStrip toolStripPlayBack;
-		private System.Windows.Forms.ToolStripButton toolStripButton1;
-		private System.Windows.Forms.ToolStripButton toolStripButton2;
-		private System.Windows.Forms.ToolStripButton toolStripButton3;
+		private System.Windows.Forms.ToolStripButton toolStripButtonPlay;
+		private System.Windows.Forms.ToolStripButton toolStripButtonPause;
+		private System.Windows.Forms.ToolStripButton toolStripButtonStop;
 		private System.Windows.Forms.ToolStrip toolStripMsgFilter;
 		private System.Windows.Forms.ToolStripLabel toolStripLabelCode;
-		private System.Windows.Forms.ToolStripTextBox toolStripTextBoxMsgFilter;
 		private System.Windows.Forms.ToolStripButton toolStripButtonMsgFilterEnable;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-		private System.Windows.Forms.ToolStripButton toolStripButton4;
+		private System.Windows.Forms.ToolStripButton toolStripButtonAddFilter;
 		private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem sQLiteDBToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+		private System.Windows.Forms.ImageList imageListPlayback;
+		private System.Windows.Forms.ImageList imageListFilter;
+		private System.Windows.Forms.ToolStripComboBox toolStripComboBoxMsgFilter;
 	}
 }
 

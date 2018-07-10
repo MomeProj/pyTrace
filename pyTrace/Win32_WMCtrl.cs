@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pyTrace
 {
-	public partial class MainForm
+	public static class Win32_WMCtrl
 	{
 		public const int WM_COPYDATA = 0x0049;
 		public const int WM_QUIT = 0x0012;
